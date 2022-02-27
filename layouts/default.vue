@@ -78,7 +78,13 @@
         <Nuxt />
       </v-container>
     </v-main>
-    <v-footer absolute dark app color="#362365" class="footer">
+    <v-footer
+      dark
+      class="footer"
+      color="#362365"
+      :app="$vuetify.breakpoint.name == 'xs' ? false : true"
+      :absolute="$vuetify.breakpoint.name == 'xs' ? false : true"
+    >
       <img class="img1" src="../assets/img/Frame 49.png" alt="" />
       <v-row justify="space-between" align="start" no-gutters>
         <v-col cols="12">
